@@ -10,7 +10,38 @@ public class HlavniProgram {
         //TODO implementace domácího úkolu
 
         //CAST 1 - nakresli prasátko
-        nakresliPrasatko(zofka);
+//        nakresliPrasatko(zofka);
+
+        //CAST 2. KOLEČKA A SLUNÍČKO
+
+        // osmihran
+        for (int i = 0; i < 8; i++) {
+            zofka.move(50);
+            zofka.turnRight(45);
+        }
+        zofka.penUp();
+
+        // posun želvy
+        zofka.turnRight(90);
+        zofka.move(150);
+        zofka.turnLeft(90);
+        zofka.move(17);
+
+        // kolečko
+        zofka.penDown();
+        for (int i = 0; i < 20; i++) {
+            zofka.move(20);
+            zofka.turnRight(19);
+        }
+        zofka.penUp();
+
+        // posun želvy
+        zofka.turnRight(70);
+        zofka.move(150);
+        zofka.penDown();
+
+
+
 
     }
 
@@ -45,6 +76,10 @@ public class HlavniProgram {
         zofka.turnLeft(180);
         zofka.move(25);
     }
+
+
+
+
 
     public static void main(String[] args) {
         new HlavniProgram().start();
