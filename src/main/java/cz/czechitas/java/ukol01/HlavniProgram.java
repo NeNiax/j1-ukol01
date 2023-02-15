@@ -10,39 +10,55 @@ public class HlavniProgram {
         //TODO implementace domácího úkolu
 
         //CAST 1 - nakresli prasátko
-//        nakresliPrasatko(zofka);
+        zofka.setLocation(400,50);
+        nakresliPrasatko(zofka);
 
-        //CAST 2. KOLEČKA A SLUNÍČKO
+        //CAST 2. nakresli osmihran + nakresli kolecko + nakresli sluníčko
+        zofka.setLocation(100,250);
+        nakresliOsmihran(zofka);
 
-        // osmihran
+        zofka.setLocation(400,230);
+        nakresliKolecko(zofka);
+
+        zofka.setLocation(700,220) ;
+        nakresliSlunicko(zofka);
+    }
+
+    private static void nakresliSlunicko(Turtle zofka) {
+        zofka.penDown();
+        for (int k = 0; k < 12; k++) {
+//kolečko výseč mezi paprsky
+            for (int p = 0; p < 3; p++) {
+                zofka.move(10);
+                zofka.turnRight(10);
+            }
+//paprsek
+            zofka.turnLeft(90);
+            zofka.move(15);
+            zofka.turnLeft(180);
+            zofka.move(15);
+            zofka.turnLeft(90);
+        }
+        zofka.penUp();
+    }
+
+
+    private static void nakresliKolecko(Turtle zofka) {
+        zofka.penDown();
+        for (int i = 0; i < 46; i++) {
+            zofka.move(10);
+            zofka.turnRight(8);
+        }
+        zofka.penUp();
+    }
+
+    private static void nakresliOsmihran(Turtle zofka) {
+        zofka.penDown();
         for (int i = 0; i < 8; i++) {
             zofka.move(50);
             zofka.turnRight(45);
         }
         zofka.penUp();
-
-        // posun želvy
-        zofka.turnRight(90);
-        zofka.move(150);
-        zofka.turnLeft(90);
-        zofka.move(17);
-
-        // kolečko
-        zofka.penDown();
-        for (int i = 0; i < 20; i++) {
-            zofka.move(20);
-            zofka.turnRight(19);
-        }
-        zofka.penUp();
-
-        // posun želvy
-        zofka.turnRight(70);
-        zofka.move(150);
-        zofka.penDown();
-
-
-
-
     }
 
     private static void nakresliPrasatko(Turtle zofka) {
