@@ -7,12 +7,10 @@ public class HlavniProgram {
     public void start() {
         Turtle zofka = new Turtle();
 
-        //TODO implementace domácího úkolu
-
         // informace ohledně velikosti plátna, počtu domečků
-        int sirkaPlatna = 900; // kolik pixelů je široké plátno
+        final int sirkaPlatna = 900; // kolik pixelů je široké plátno = konstanta
 
-        int domeckuHorniRada = 5; // kolik domečků do horní řady
+        final int domeckuHorniRada = 5; // kolik domečků do horní řady = konstanta
         int mezeraMeziDomecky = 100; // kolik je mezera mezi domečky
         int polovicniMezera = mezeraMeziDomecky / 2;
         int otockaPismenoPaR = 2;   // o kolik pixelů se posunu než zatočím
